@@ -1,0 +1,123 @@
+---
+import "../styles/global.css";
+import { siteLinks } from "../config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "HS Psicóloga | Hag Schultz",
+  description = "HS Psicóloga: psicoterapia para adultos, saúde mental no trabalho e agenda online."
+} = Astro.props;
+
+const { whatsapp: whatsappUrl, instagram: instagramUrl, linkedin: linkedinUrl, email } = siteLinks;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href="/assets/logo-simbolo-redondo.png" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="/#inicio" aria-label="Hag Schultz Psicóloga - início">
+        <img class="brand-symbol" src="/assets/logo-simbolo-redondo.png" alt="" />
+        <span class="brand-text">
+          <strong>Hag Schultz</strong>
+          <small>Psicóloga | CRP 03/34978</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-menu" data-menu>
+        <a href="/#inicio">Início</a>
+        <a href="/#sobre">Sobre mim</a>
+        <a href="/#psicoterapia">Psicoterapia</a>
+        <a href="/#empresas">Empresas</a>
+        <a href="/#conteudos">Conteúdos</a>
+        <a href="/#perguntas">Perguntas frequentes</a>
+        <a href="/#agenda">Agenda</a>
+        <a href="/#agenda" class="nav-cta">Agendar atendimento</a>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="footer-column footer-about">
+        <h2>Hag Schultz</h2>
+        <p>Psicóloga • Terapia Cognitivo-Comportamental e Psicologia Organizacional do Trabalho.</p>
+        <p>CRP 03/34978</p>
+      </div>
+
+      <nav class="footer-column footer-links" aria-label="Navegação do rodapé">
+        <h2>Navegação</h2>
+        <a href="/#inicio">Início</a>
+        <a href="/#sobre">Sobre mim</a>
+        <a href="/#psicoterapia">Psicoterapia</a>
+        <a href="/#empresas">Empresas</a>
+        <a href="/#conteudos">Conteúdos</a>
+        <a href="/#perguntas">Perguntas frequentes</a>
+        <a href="/#agenda">Agenda</a>
+      </nav>
+
+      <div class="footer-column footer-contact">
+        <h2>Contato</h2>
+        <a href={`mailto:${email}`}>{email}</a>
+        <a href={whatsappUrl} target="_blank" rel="noopener">WhatsApp</a>
+        <a href={instagramUrl} target="_blank" rel="noopener">@hag.psicologia</a>
+        <a href={linkedinUrl} target="_blank" rel="noopener">LinkedIn</a>
+        <p>Atendimento online • Brasil</p>
+      </div>
+
+      <div class="footer-note">
+        <p>© 2026 Hag Schultz. Todos os direitos reservados.</p>
+        <p>Ética e ciência no cuidado psicológico.</p>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href={whatsappUrl} target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+      WhatsApp
+    </a>
+
+    <script>
+      const menuToggle = document.querySelector("[data-menu-toggle]");
+      const menu = document.querySelector("[data-menu]");
+      const menuLinks = document.querySelectorAll("[data-menu] a");
+
+      function closeMenu() {
+        menu?.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+        menuToggle?.setAttribute("aria-expanded", "false");
+      }
+
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = menu?.classList.toggle("is-open");
+        document.body.classList.toggle("menu-open", Boolean(isOpen));
+        menuToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 920) {
+          closeMenu();
+        }
+      });
+    </script>
+  </body>
+</html>
