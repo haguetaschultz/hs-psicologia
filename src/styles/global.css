@@ -256,7 +256,7 @@ h3 {
   min-height: 48px;
   padding: 13px 20px;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.2;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
@@ -713,13 +713,19 @@ details p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 0 20px;
+  width: 56px;
+  height: 56px;
   background: #5f7b63;
   color: #fff;
-  border-radius: 999px;
+  border-radius: 50%;
   box-shadow: 0 16px 32px rgba(47, 66, 51, 0.3);
-  font-weight: 800;
+}
+
+.whatsapp-float svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
 }
 
 .post-page {

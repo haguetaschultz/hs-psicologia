@@ -221,13 +221,8 @@ const { agenda: agendaUrl, whatsapp: whatsappUrl } = siteLinks;
         </article>
       </div>
 
-      <div class="calendar-placeholder" aria-label="Área para agenda incorporada">
-        <p>A agenda online será disponibilizada em breve. Enquanto isso, você pode solicitar um horário pelo WhatsApp.</p>
-      </div>
-
       <div class="schedule-actions">
         <a class="button primary" href={agendaUrl} target="_blank" rel="noopener">Agendar atendimento</a>
-        <a class="button secondary" href={whatsappUrl} target="_blank" rel="noopener">Falar pelo WhatsApp</a>
       </div>
     </section>
 
@@ -247,7 +242,7 @@ const { agenda: agendaUrl, whatsapp: whatsappUrl } = siteLinks;
         <p class="eyebrow">Próximo passo</p>
         <h3>Agendar conversa inicial</h3>
         <p>30 minutos para tirar dúvidas, entender sua demanda e verificar se o atendimento faz sentido para você.</p>
-        <a class="button primary light" href="#agenda">Ver horários</a>
+        <a class="button primary light" href={agendaUrl} target="_blank" rel="noopener">Ver horários</a>
       </aside>
     </section>
   </main>
