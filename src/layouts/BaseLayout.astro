@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { siteLinks } from "../config/site";
+import { siteContent } from "../data/siteContent";
 
 interface Props {
   title?: string;
@@ -62,13 +63,13 @@ const {
 
     <footer class="site-footer">
       <div class="footer-column footer-about">
-        <h2>Hag Schultz</h2>
-        <p>Psicóloga • Terapia Cognitivo-Comportamental e Psicologia Organizacional do Trabalho.</p>
-        <p>CRP 03/34978</p>
+        <h2>{siteContent.footer.brand}</h2>
+        <p>{siteContent.footer.description}</p>
+        <p>{siteContent.footer.crp}</p>
       </div>
 
       <nav class="footer-column footer-links" aria-label="Navegação do rodapé">
-        <h2>Navegação</h2>
+        <h2>{siteContent.footer.navTitle}</h2>
         <a href="/#inicio">Início</a>
         <a href="/#sobre">Sobre mim</a>
         <a href="/#psicoterapia">Psicoterapia</a>
@@ -79,17 +80,17 @@ const {
       </nav>
 
       <div class="footer-column footer-contact">
-        <h2>Contato</h2>
+        <h2>{siteContent.footer.contactTitle}</h2>
         <a href={`mailto:${email}`}>{email}</a>
         <a href={whatsappUrl} target="_blank" rel="noopener">WhatsApp</a>
         <a href={instagramUrl} target="_blank" rel="noopener">@hag.psicologia</a>
         <a href={linkedinUrl} target="_blank" rel="noopener">LinkedIn</a>
-        <p>Atendimento online • Brasil</p>
+        <p>{siteContent.footer.onlineAndInPerson}</p>
       </div>
 
       <div class="footer-note">
-        <p>© 2026 Hag Schultz. Todos os direitos reservados.</p>
-        <p>Ética e ciência no cuidado psicológico.</p>
+        <p>{siteContent.footer.copyright}</p>
+        <p>{siteContent.footer.ethics}</p>
       </div>
     </footer>
 

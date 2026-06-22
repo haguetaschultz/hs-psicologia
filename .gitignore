@@ -4,4 +4,7 @@ dist/
 .env
 .env.*
 *.db
+*.sqlite
+*.tmp
+*.swp
 .DS_Store
