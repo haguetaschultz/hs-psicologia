@@ -802,3 +802,12 @@ details p {
   max-width: none;
   font-size: clamp(2rem, 3.2vw, 3rem);
 }
+.companies .section-heading {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.companies .section-heading h2 {
+  max-width: 1000px;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+}
