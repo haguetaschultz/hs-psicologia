@@ -69,3 +69,13 @@
   .custom-talk,.talks-cta{padding:26px}
   .audience-chips span{width:100%;border-radius:var(--radius)}
 }
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  background: #f9f4ed;
+}
+
+.gallery-card figcaption {
+  flex: 1;
+  background: #f9f4ed;
+}
