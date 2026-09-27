@@ -811,3 +811,6 @@ details p {
   max-width: 1000px;
   font-size: clamp(2rem, 3.2vw, 3rem);
 }
+.schedule-actions {
+  margin-top: 28px;
+}
