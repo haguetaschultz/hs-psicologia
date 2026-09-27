@@ -799,6 +799,6 @@ details p {
 }
 
 .intro .section-heading h2 {
-  max-width: 820px;
+  max-width: none;
   font-size: clamp(2rem, 3.2vw, 3rem);
 }
