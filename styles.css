@@ -10,7 +10,7 @@
   --color-muted: #6f675f;
   --shadow-soft: 0 24px 70px rgba(78, 65, 53, 0.12);
   --radius: 8px;
-  --max-width: 1120px;
+  --max-width: none;
 }
 
 * {
