@@ -793,3 +793,12 @@ details p {
 .card-profile .text-link {
   margin-top: 0;
 }
+.intro .section-heading {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.intro .section-heading h2 {
+  max-width: 820px;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+}
