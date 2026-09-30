@@ -814,3 +814,13 @@ details p {
 .schedule-actions {
   margin-top: 28px;
 }
+header nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+header nav a{
+  text-decoration:none;
+  font-weight:700;
+}
