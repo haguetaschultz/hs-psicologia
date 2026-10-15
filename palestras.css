@@ -19,7 +19,10 @@
 .talk-card{display:flex;flex-direction:column;min-height:390px}
 .talk-card h3{font-size:1.7rem}.talk-card .content-tag{margin-bottom:10px}
 .talk-subtitle{margin:-3px 0 16px!important;color:var(--color-earth)!important;font-weight:800}
+.talk-when{margin:18px 0 0!important;padding:11px 13px;border-radius:10px;background:rgba(130,144,130,.10);color:var(--color-earth);font-size:.9rem;line-height:1.5}
+.talk-when strong{color:var(--color-sage-dark)}
 .talk-topics{margin-top:auto!important;padding-top:22px;border-top:1px solid rgba(108,87,72,.13);font-size:.94rem}
+.talk-when + .talk-topics{margin-top:18px!important}
 
 .custom-talk{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;margin-top:20px;padding:clamp(28px,4vw,42px);background:linear-gradient(135deg,rgba(130,144,130,.16),rgba(201,165,154,.17));border:1px solid rgba(108,87,72,.13);border-radius:var(--radius)}
 .custom-talk h3{font-size:clamp(1.65rem,2.8vw,2.3rem);max-width:700px}.custom-talk p:last-child{margin-bottom:0}
