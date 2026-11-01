@@ -189,6 +189,18 @@ header nav a:last-child{
 <style>
 body{margin:0}.site-header{background:#fbf8f3;border-bottom:1px solid #ded7ce;display:flex;align-items:center;justify-content:space-between;padding:16px max(20px,calc((100vw - 1120px)/2));gap:24px}.site-header a{text-decoration:none}.brand{display:flex;align-items:center;gap:12px}.brand-symbol{width:56px;height:56px}.brand-text{display:flex;flex-direction:column}.brand-text strong{font:700 28px/1.2 Georgia,serif;color:#4f5e51}.brand-text small{font:400 13px/1.3 Arial,sans-serif;color:#6c5748}.site-header .new-nav{display:flex;gap:24px}.site-header .new-nav a,.site-header .new-nav a:last-child{font:400 .95rem/1.4 Arial,sans-serif;padding:10px 0;color:#344c3e;border:0;background:transparent;border-radius:0}.site-footer{background:#fbf8f3;display:flex;justify-content:space-between;gap:24px;padding:35px max(20px,calc((100vw - 1120px)/2));font:400 16px/1.6 Arial,sans-serif;color:#706961;text-align:left}.site-footer>div>strong{color:#4f5e51}.site-footer p{margin:6px 0 0}.site-footer .footer-contact{display:flex;flex-direction:column;gap:8px;font-style:normal;text-align:right}.site-footer .footer-contact a{font:400 16px/1.6 Arial,sans-serif;color:#706961;text-decoration:none}.site-footer a strong{font-family:inherit;font-weight:700}
 @media(max-width:650px){.site-header{flex-wrap:wrap}.site-header .new-nav{width:100%;justify-content:space-between;gap:16px}.site-header .new-nav a{font-size:.86rem}.site-footer{flex-direction:column}.site-footer .footer-contact{text-align:left}}
+</style><style>
+body .site-footer{width:min(1120px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:28px;padding:35px 0;border-top:1px solid rgba(108,87,72,.14);background:transparent;color:#706961;text-align:left;font:400 16px/1.6 Arial,sans-serif}
+body .site-footer>div{margin:0;padding:0;text-align:left}
+body .site-footer>div>strong{color:#4f5e51}
+body .site-footer p{margin:6px 0 0;text-align:left}
+body .site-footer .footer-contact{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin:0;padding:0;font-style:normal;text-align:right}
+body .site-footer .footer-contact a{display:block;width:auto;margin:0;padding:0;color:#706961;font:400 16px/1.6 Arial,sans-serif;text-decoration:none;white-space:normal}
+body .site-footer .footer-contact a strong{display:inline;font-family:inherit;font-weight:700}
+.article-return{margin-top:40px;text-align:left}
+.article-return a{display:inline-flex;align-items:center;padding:14px 22px;border-radius:999px;background:#4f5e51;color:#fffdf9;font:400 16px/1.4 Arial,sans-serif;text-decoration:none}
+.article-return a:hover,.article-return a:focus-visible{background:#344c3e}
+@media(max-width:650px){body .site-footer{grid-template-columns:1fr;gap:20px}body .site-footer .footer-contact{align-items:flex-start;text-align:left}}
 </style></head>
 
 <body>
@@ -431,7 +443,7 @@ body{margin:0}.site-header{background:#fbf8f3;border-bottom:1px solid #ded7ce;di
 
       </section>
 
-    </article>
+    <nav class="article-return" aria-label="Mais conteúdos"><a href="/conteudos.html">← Ver outros conteúdos</a></nav></article>
   </main>
 
   <footer class="site-footer"><div><strong>Hag Schultz | Psicóloga</strong><p>CRP 03/34978 · Salvador/BA</p></div><address class="footer-contact"><a href="https://www.instagram.com/psi.hagschultz"><strong>Instagram</strong>: @psi.hagschultz</a><a href="https://wa.me/5571981852840"><strong>WhatsApp</strong>: (71) 98185-2840</a><a href="mailto:schultzhag@gmail.com">schultzhag@gmail.com</a></address></footer>
